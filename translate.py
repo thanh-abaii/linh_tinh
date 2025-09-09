@@ -27,7 +27,7 @@ def translate_text(input_text, target_language="zh"):
     ]
     # Gọi API OpenAI để thực hiện dịch thuật
     response = client.chat.completions.create(
-        model="gpt-3.5-turbo",
+        model="gpt-4-0125-preview",
         messages=messages,
         max_tokens=512,
         temperature=0.5
@@ -45,3 +45,4 @@ if __name__ == "__main__":
     input_text = "The 5G network uses massive MIMO and beamforming technologies to improve performance."
     translated_output = translate_text(input_text, target_language="fr")
     print("\nFinal Output:\n", translated_output)
+
